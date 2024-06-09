@@ -1,0 +1,153 @@
+/* General styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: #3866f2;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .titulo {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  
+  main {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Table styles */
+  .tabla {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .tabla th, .tabla td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .tabla th {
+    background-color: #eee;
+    font-weight: bold;
+  }
+  
+  /* Button styles */
+  .boton {
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+/* Media queries */
+@media (max-width: 768px) {
+.tabla {
+    width: 100%;
+    }
+}
+
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form_group{
+    position: relative;
+    --color: #5757577e
+}
+
+.form_input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1em;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form_input:not(:placeholder-shown) ~ .form_label{
+    color: #4d4646;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+.form_label{
+    color:var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px; 
+    transform: translateY(20px);
+    transition: transform .5s, color .3s;
+
+}
+
+.form_submit{
+    background: #3866f2;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown) ~ .form_label{
+    transform: scale(1);
+}
+
+@media (max-width:425px) {
+    
+    .form_tittle{
+        font-size: 1.8rem;
+    }
+}
