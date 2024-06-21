@@ -88,8 +88,8 @@ Wireshark and ESP32 are two distinct technologies that can be integrated to enha
     ### ESP32 board on Arduino IDE
     1. You will need to give permissions to port with the next command ```sudo chmod 666 /dev/ttyUSB0```.
     2. Install python *esptool*. 
-        >[!WARNING]
-        >PIP3 install not works for Ubuntu. You will need to use this command:
+    >[!WARNING]
+    >PIP3 install not works for Ubuntu. You will need to use this command:
 
             ```bash
             sudo apt-get update
