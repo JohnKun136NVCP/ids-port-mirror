@@ -85,25 +85,28 @@ Wireshark and ESP32 are two distinct technologies that can be integrated to enha
     sudo ./install.sh
     ```
 
-    ### ESP32 board on Arduino IDE
-    1. You will need to give permissions to port with the next command ```sudo chmod 666 /dev/ttyUSB0```.
-    2. Install python *esptool*. 
-    >[!WARNING]
-    >PIP3 install not works for Ubuntu. You will need to use this command:
+### ESP32 board on Arduino IDE
+1. You will need to give permissions to port with the next command ```sudo chmod 666 /dev/ttyUSB0```.
+2. Install python *esptool*. 
 
-            ```bash
-            sudo apt-get update
-            sudo apt-get install esptool
-            ```
-    3. Conect your ESP32 board to the computer.
-    4. Once connected ESP32 is plugged, then LED of ESP32 will turn on.  If the LED does not light up, it is possible that the cable or the USB port is damaged.
-    5. You need to dowload ESP32 board. For this, it's necessary to go to *Tools > Board* and select the corresponding option. In this case *Heltec ESP32 Arduino > Wireless Stick Lite*.
-    6. You will need to give permissions to ports and although in many cases the IDE itself determines the port used by the board, in other cases it is necessary to specify it. To do this, go to *Tools > Port*, then select the port corresponding to the board. In Linux it starts with tty and is usually followed by the words ACM or USB with an order number.
-    7. All that remains is to load the implemented code to the ESP32. To check that the engraving process is correct, a good option is to use the Blink example, since it does not require any external component.Once the code is ready, it is necessary to click on the check button of the IDE to verify that there is no error in it. Then, by clicking on the load button, the code is written to the ESP32. Once the code is finished loading the LED on the board will start blinking.
+>[!WARNING]
+>PIP3 install not works for Ubuntu. You will need to use this command:
+
+```bash
+sudo apt-get update
+sudo apt-get install esptool
+```
+3. Conect your ESP32 board to the computer.
+4. Once connected ESP32 is plugged, then LED of ESP32 will turn on.  If the LED does not light up, it is possible that the cable or the USB port is damaged.
+5. You need to dowload ESP32 board. For this, it's necessary to go to *Tools > Board* and select the corresponding option. In this case *Heltec ESP32 Arduino > Wireless Stick Lite*.
+6. You will need to give permissions to ports and although in many cases the IDE itself determines the port used by the board, in other cases it is necessary to specify it. To do this, go to *Tools > Port*, then select the port corresponding to the board. In Linux it starts with tty and is usually followed by the words ACM or USB with an order number.
+7. All that remains is to load the implemented code to the ESP32. To check that the engraving process is correct, a good option is to use the Blink example, since it does not require any external component.Once the code is ready, it is necessary to click on the check button of the IDE to verify that there is no error in it. Then, by clicking on the load button, the code is written to the ESP32. Once the code is finished loading the LED on the board will start blinking.
 
 ### Hardware
 - 3 LEDS (Red, Yellow and Green)
 - 1 Buzzer
+- ESP32
+- Resistors
 - Protoboard
 
 Diagrams bellow for blink (Leds) and Buzzer
